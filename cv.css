@@ -1,0 +1,248 @@
+@font-face {
+    font-family: new;
+    src:url(demo.ttf);
+}
+@font-face {
+    font-family: first;
+    src:url(Fad.ttf);
+}
+@font-face {
+    font-family: second;
+    src:url(am.ttf);
+}
+/* Creating 3 new fonts new, first et second */
+body{
+  background: url('background.jpg');
+  background-size: cover;
+  background-attachment: fixed;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+/* assigning a fixed background to the body to give a sort of parallex effect
+    + centering the article
+ */
+.center{
+  margin: 100px 0px;
+  background-color: #3E4348;
+}
+/*center is the class name of the main div of the page : assigning a background color to the div*/
+.resume{
+  width: 1000px;
+  height: 2500px;
+  background: url('background.jpg');
+  background-size: 1200px 500px;
+  background-repeat: no-repeat;
+  box-shadow: 0px 10px 20px black;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+}
+/* assigning a background header and a flex display of the content */
+#coordonnées{
+  display: flex;
+  flex-direction: row;
+}
+/* assigning a flex display to the details of the profil */
+h1[title="ahmed"],h1[title="job"]{
+  color: white;
+  font-family: new;
+  font-weight: bold;
+  font-size: 70px;
+}
+h1[title="job"]{
+  font-size: 90px;
+  margin-top: -50px;
+}
+h1>span{
+  color: #30A9DE;
+}
+/* Customizing the titles */
+.resume>fieldset{
+  width: 500px;
+  height: 700px;
+  padding-left: 250px;
+  border:2px solid #C5C6B6;
+  position: relative;
+}
+/* styling the 1st fieldset */
+.photo{
+  width: 250px;
+  height: 250px;
+  border-radius: 60%;
+  overflow: hidden;
+  background: url('ahmed.jpg') no-repeat fixed;
+  background-size: 500px 700px;
+  background-position: top center;
+  overflow: hidden;
+}
+/* slyling the headshot and attaching it so it feels like parallex */
+.contact{
+  width: 100px;
+  height: 80px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  animation-name: loading;
+  animation-duration: 1.5s;
+  animation-iteration-count: 1;
+}
+@keyframes loading {
+      0%    {transform: scale(2,2);}
+      25%   {transform: scale(2,2);}
+      50%   {transform: scale(1.5,1.5);}
+      75%   {transform: scale(1.5,1.5);}
+      100%   {transform: scale(1,1);}
+}
+/* a bit of animation to the details */
+a{
+  text-decoration: none;
+  color: #E0E3DA;
+}
+.x1{
+  position: relative;
+  top: -50px;
+  left: -150px;
+}
+.x2{
+  position: relative;
+  top: -35px;
+  left: -80px;
+}
+.x3{
+  position: relative;
+  top: -70px;
+  left: 80px;
+}
+.x4{
+  position: relative;
+  top: -195px;
+  left: 220px;
+}
+.x5{
+  position: relative;
+  top: -367px;
+  left: 300px;
+}
+/* positioning the details in a circle */
+.profil>h2{
+  font-family: second;
+  color: #30A9DE;
+  font-weight: bold;
+}
+.profil{
+  color: #E0E3DA;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  top: -200px;
+  left: -110px;
+}
+/*poistioning the profil and applying a flex display to the details*/
+.details{
+  width: 800px;
+  height: 400px;
+  display: flex;
+  justify-content: space-around;
+}
+.date{
+  width: 300px;
+  overflow: hidden;
+  color: gray;
+  margin: 10px;
+  cursor: pointer;
+}
+.skills>h1,.education>h1,.experiance>h1,.tab>h1{
+  color: #30A9DE;
+  font-family: second;
+}
+/* styling the titles */
+.skill{
+  width: 300px;
+  height: 40px;
+  border: 1px solid gray;
+  margin: 5px;
+  color: white;
+}
+.skill>div{
+  height: 20px;
+  background: linear-gradient(160deg, #00ccac 0%, #30A9DE 100%);
+  padding: 10px;
+  text-align: center;
+}
+.skill:nth-of-type(1)>div{
+  width: 150px;
+}
+.skill:nth-of-type(2)>div{
+  width: 70px;
+}
+.skill:nth-of-type(3)>div{
+  width: 80px;
+}
+.skill:nth-of-type(4)>div{
+  width: 50px;
+}
+/* assigning to each skill a different width */
+.experiance{
+  width: 800px;
+  height: 400px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.experiance>fieldset{
+  width: 800px;
+  color: #666;
+  border:1px solid gray;
+  font-size: 15px;
+}
+legend{
+  color: #30A9DE;
+  font-family: second;
+  font-weight: bold;
+  font-size: 20px;
+}
+/* styling the experiance section */
+.tab{
+  width: 800px;
+  height: 300px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.langs{
+  width: 800px;
+  height: 100px;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+.langs>div{
+  display: flex;
+  flex-direction: column;
+}
+.lang>h1,.reference>h1{
+  color: gray;
+  font-family: new;
+}
+/* styling all the titles in last two sections */
+.references{
+  width: 800px;
+  height: 150px;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  box-shadow: 0px 4px 4px black;
+}
+.reference>p{
+  color: white;
+  font-family: first;
+  font-size: 14px;
+}
+/* styling the references */
